@@ -1,4 +1,8 @@
+
+pub mod manipulation;
+use crate::manipulation::interface::EEMMatrix;
+
 fn main() {
-    let url : &str = "http://cowlet.org/2016/08/23/linear-regression-in-rust.html";
-    println!("{url}");
+    let matrix = EEMMatrix::load_eem("rondo_acapricio.dat").unwrap();
+    println!("{:?}", matrix.emission)
 }
